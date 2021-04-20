@@ -112,3 +112,7 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.DS_Store
+
+.git
+airflow_settings.yaml
