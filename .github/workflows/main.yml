@@ -6,12 +6,12 @@ jobs:
   prod-push:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Push to registry
-      uses: elgohr/Publish-Docker-Github-Action@master
-      if: github.ref == 'refs/heads/main'
-      with:
-          name: frigid-space-7114/airflow:ci-${{ github.sha }}
+      - uses: actions/checkout@v1
+      - name: Push to registry
+        uses: elgohr/Publish-Docker-Github-Action@master
+        if: github.ref == 'refs/heads/main'
+        with:
+          name: observational-protostar-5069/airflow:ci-${{ github.sha }}
           username: _
           password: ${{ secrets.SERVICE_ACCOUNT_KEY }}
           registry: registry.gcp0001.us-east4.astronomer.io
