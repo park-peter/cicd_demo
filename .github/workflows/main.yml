@@ -11,7 +11,7 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@master
         if: github.ref == 'refs/heads/main'
         with:
-          name: observational-protostar-5069/airflow:ci-${{ github.sha }}
+          name: test/airflow:ci-${{ github.sha }}
           username: _
           password: ${{ secrets.SERVICE_ACCOUNT_KEY }}
-          registry: registry.gcp0001.us-east4.astronomer.io
+          registry: registry.gcp.solutions.astronomer-sandbox.io
